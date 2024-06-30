@@ -1,22 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mytcsapp20
+  name: firstapp
   labels:
-    app: mytcsapp20
-  namespace: namespace-workflow-1698682582778
+    app: firstapp
+    kubernetes.azure.com/generator: devhub
+  namespace: namespace-workflow-1719738759329
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mytcsapp20
+      app: firstapp
   template:
     metadata:
       labels:
-        app: mytcsapp20
+        app: firstapp
     spec:
       containers:
-        - name: mytcsapp20
-          image: acrworkflow1698682582778.azurecr.io/image-workflow-1698682582778:latest
+        - name: firstapp
+          image: acrworkflow1719738759329.azurecr.io/image-workflow-1719738759329:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 5000
