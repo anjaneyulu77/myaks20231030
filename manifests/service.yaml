@@ -1,12 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: mytcsapp20
-  namespace: namespace-workflow-1698682582778
+  name: firstapp
+  namespace: namespace-workflow-1719738759329
+  labels:
+    kubernetes.azure.com/generator: devhub
 spec:
   type: LoadBalancer
   selector:
-    app: mytcsapp20
+    app: firstapp
   ports:
     - protocol: TCP
       port: 5000
