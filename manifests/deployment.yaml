@@ -5,7 +5,7 @@ metadata:
   labels:
     app: firstapp
     kubernetes.azure.com/generator: devhub
-  namespace: namespace-workflow-1719763608005
+  namespace: namespace-workflow-1719845279495
 spec:
   replicas: 1
   selector:
@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: firstapp
-          image: acrworkflow1719763608005.azurecr.io/image-workflow-1719763608005:latest
+          image: acrworkflow1719845279495.azurecr.io/image-workflow-1719845279495:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 5000

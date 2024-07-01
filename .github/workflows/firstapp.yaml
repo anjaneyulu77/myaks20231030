@@ -6,10 +6,10 @@ name: firstapp
     workflow_dispatch: {}
 env:
     ACR_RESOURCE_GROUP: aks-rg
-    AZURE_CONTAINER_REGISTRY: acrworkflow1719763608005
-    CLUSTER_NAME: mytcs2023
+    AZURE_CONTAINER_REGISTRY: acrworkflow1719845279495
+    CLUSTER_NAME: mytcs2024
     CLUSTER_RESOURCE_GROUP: aks-rg
-    CONTAINER_NAME: image-workflow-1719763608005
+    CONTAINER_NAME: image-workflow-1719845279495
     DEPLOYMENT_MANIFEST_PATH: |
         manifests/deployment.yaml
         manifests/service.yaml
@@ -62,4 +62,4 @@ jobs:
                 action: deploy
                 images: ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.CONTAINER_NAME }}:${{ github.sha }}
                 manifests: ${{ env.DEPLOYMENT_MANIFEST_PATH }}
-                namespace: namespace-workflow-1719763608005
+                namespace: namespace-workflow-1719845279495
